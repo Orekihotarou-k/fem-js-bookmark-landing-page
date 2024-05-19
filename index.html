@@ -14,6 +14,19 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
+    <!-- Always get the latest version -->
+    <!-- Not recommended for production sites! -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer/dist/bouncer.polyfills.min.js"></script>
+
+    <!-- Get minor updates and patch fixes within a major version -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1/dist/bouncer.polyfills.min.js"></script>
+
+    <!-- Get patch fixes within a minor version -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.0/dist/bouncer.polyfills.min.js"></script>
+
+    <!-- Get a specific version -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.0.0/dist/bouncer.polyfills.min.js"></script>
+
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body>
@@ -261,7 +274,9 @@
           <label for="emailInput">
             <input
               type="email"
+              name="email"
               id="emailInput"
+              required
               placeholder="Enter your email address"
             />
             <button type="submit" class="newsletter-submit soft-red-btn">

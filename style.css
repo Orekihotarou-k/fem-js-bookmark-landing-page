@@ -70,6 +70,33 @@ body {
   background: #fff;
 }
 
+/* bouncer js error styles */
+form .error {
+  outline: 2px solid var(--clr-Soft-Red);
+  border-color: var(--clr-Soft-Red);
+}
+
+form {
+  position: relative;
+  z-index: 5;
+}
+
+form .error-message {
+  color: #fff;
+  text-align: left;
+  font-size: 12px;
+  width: 17.12rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+  background-color: var(--clr-Soft-Red);
+  font-style: italic;
+  margin-bottom: 1em;
+  z-index: -1;
+}
+
 /* helper classes */
 .flex {
   display: flex;
@@ -572,6 +599,10 @@ footer {
     margin-top: 8rem;
   }
 
+  .features {
+    margin-top: 0;
+  }
+
   .hero {
     flex-direction: row;
     margin-top: 4rem;
@@ -665,7 +696,7 @@ footer {
 
   /* newsletter section */
   .newsletter-container {
-    max-width: 45rem;
+    max-width: 30rem;
     margin-inline: auto;
   }
 
@@ -679,6 +710,12 @@ footer {
 
   .newsletter-submit {
     width: 30rem;
+  }
+
+  .newsletter-submit:hover {
+    background-color: #fff;
+    color: var(--clr-Soft-Red);
+    border-color: var(--clr-Soft-Red);
   }
 
   /* footer section styles */
