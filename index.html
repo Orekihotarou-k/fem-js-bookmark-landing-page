@@ -15,17 +15,6 @@
     <script src="script.js" defer></script>
 
     <title>Frontend Mentor | Bookmark landing page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <header class="flex">
@@ -267,16 +256,19 @@
       <div class="newsletter-container">
         <span class="newsletter-title">35,000+ already joined</span>
         <p class="newsletter-subtitle">Stay up-to-date with what we’re doing</p>
-        <label for="emailInput">
-          <input
-            type="email"
-            id="emailInput"
-            placeholder="Enter your email address"
-          />
-          <button type="submit" class="newsletter-submit soft-red-btn">
-            Contact Us
-          </button>
-        </label>
+
+        <form>
+          <label for="emailInput">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Enter your email address"
+            />
+            <button type="submit" class="newsletter-submit soft-red-btn">
+              Contact Us
+            </button>
+          </label>
+        </form>
       </div>
     </section>
 
