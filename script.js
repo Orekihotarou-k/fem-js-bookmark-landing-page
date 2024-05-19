@@ -10,53 +10,20 @@ function toggleMenu() {
 toggleMenuButton.addEventListener("click", toggleMenu);
 
 // function to change features
-const featureBtnOne = document.querySelector(".feature-btn-one");
-const featureBtnTwo = document.querySelector(".feature-btn-two");
-const featureBtnThree = document.querySelector(".feature-btn-three");
+const featureBtns = document.querySelectorAll(".feature-tab--btn");
+const featureElements = document.querySelectorAll(".feature-content");
 
-// feature elements
-const featureOne = document.querySelector(".feature-one");
-const featureTwo = document.querySelector(".feature-two");
-const featureThree = document.querySelector(".feature-three");
-
-featureBtnTwo.addEventListener("click", toggleFeatureTwo);
-
-function toggleFeatureTwo() {
-  featureOne.classList.add("inactive");
-  featureThree.classList.add("inactive");
-  featureTwo.classList.remove("inactive");
-}
-
-featureBtnThree.addEventListener("click", toggleFeatureThree);
-
-function toggleFeatureThree() {
-  featureTwo.classList.add("inactive");
-  featureOne.classList.add("inactive");
-  featureThree.classList.remove("inactive");
-}
-
-featureBtnOne.addEventListener("click", toggleFeatureOne);
-
-function toggleFeatureOne() {
-  featureTwo.classList.add("inactive");
-  featureThree.classList.add("inactive");
-  featureOne.classList.remove("inactive");
-}
-
-// const featureBtns = document.querySelectorAll(".feature-btn");
-// const featureElements = document.querySelectorAll(".feature");
-
-// featureBtns.forEach((btn, index) => {
-//   btn.addEventListener("click", () => {
-//     featureElements.forEach((el, i) => {
-//       if (i === index) {
-//         el.classList.remove("inactive");
-//       } else {
-//         el.classList.add("inactive");
-//       }
-//     });
-//   });
-// });
+featureBtns.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    featureElements.forEach((el, i) => {
+      if (i === index) {
+        el.classList.remove("inactive");
+      } else {
+        el.classList.add("inactive");
+      }
+    });
+  });
+});
 
 // function to toggle faq
 const faq = document.querySelectorAll(".faq");
@@ -68,7 +35,7 @@ faqQuestion.forEach((element) => {
   });
 });
 
-// validate the email input
+// validate the email input using bouncerJS
 var validate = new Bouncer("form", {
   // Classes & IDs
   fieldClass: "error", // Applied to fields with errors
